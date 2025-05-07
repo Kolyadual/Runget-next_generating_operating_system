@@ -8,6 +8,20 @@ The next-generated operaing system based on Linux kernel and controlled by AI.
 # Use it however you want, wherever you want!
 Thanks to the AI assistant Lily&Anemon bot, which was made by the Runget developers themselves, you can use the system very simply by asking the neural network to do somethink!
 
+# Runget news
+
+[07.05.2025] Runget 1.0 Anythink Anywhere is coming soon!
+
+# Runget developers
+
+Kolyadual(Nikolay Alekhin) - The main creator, he was the one who came up with the idea of ​​creation. He made this system. Runget Software Creator.
+
+Kirilldual(Kirill Lavlinskiy) - Designer.
+
+Seregaosm(Sergei Rubcov) - Designer №2.
+
+Neeby(Gleb Savchenko) - Runget Software Creator.
+
 # Runget gallery
 
 ![Runget 1.0 Anythink Anywhere](https://github.com/user-attachments/assets/7296ed95-d2d0-4693-8b65-a0193eaeb880)
