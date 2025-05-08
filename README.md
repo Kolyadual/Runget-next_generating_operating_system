@@ -1,3 +1,5 @@
+<h1 align="center">Hi there, I'm <a href="https://t.me/RungetOff" target="_blank">Runget</a>
+<h3 align="center">Operation system based on Ubuntu flavours</h3>
 
 # Runget - fast, simple, beautiful Operating system!
 You can download, watch news and other in this page
