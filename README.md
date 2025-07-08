@@ -21,7 +21,7 @@ Kolyadual(Nikolay Alekhin) - The main creator, he was the one who came up with t
 
 Kirilldual(Kirill Lavlinskiy) - Designer.
 
-Seregaosm(Sergei Rubcov) - Designer №2.
+Seregaosm(Sergei Rubcov) - Designer №2, Runget Software Creator
 
 Neeby(Gleb Savchenko) - Runget Software Creator.
 
