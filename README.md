@@ -25,6 +25,10 @@ Seregaosm(Sergei Rubcov) - Designer №2.
 
 Neeby(Gleb Savchenko) - Runget Software Creator.
 
+# Our social media
+<a href="https://t.me/runget_rt">Our official Telegram channel</a>
+
+
 # Runget gallery
 
 ![Runget 1.0 Anythink Anywhere](https://github.com/user-attachments/assets/7296ed95-d2d0-4693-8b65-a0193eaeb880)
