@@ -33,10 +33,10 @@ Neeby(Gleb Savchenko) - Runget Software Creator.
 <a href="https://t.me/runget_rt">Our official Telegram channel</a>
 
 Technical support:
-Email: runget.feedback@gmail.com
-Telegram: @kirilldual
-Whatsapp: +7 930 415 6287
-Telegram channel with news {WIP}
+# Email: runget.feedback@gmail.com
+# Telegram: @kirilldual
+# Whatsapp: +7 930 415 6287
+# Telegram channel with news {WIP}
 
 WIP-Work In Progress (There may be bugs)
 
