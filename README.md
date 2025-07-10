@@ -3,7 +3,7 @@
   Official telegram channel:
     https://t.me/runget_rt
 
-# Runget{WIP} - fast, simple, beautiful Operating system!
+# Runget - fast, simple, beautiful Operating system!
 You can download, watch news and other in this page
 
 ![Runget-logo](https://github.com/user-attachments/assets/dffc803c-7fcd-4e9d-95ad-b87c157f74d4)
@@ -33,8 +33,11 @@ Neeby(Gleb Savchenko) - Runget Software Creator.
 <a href="https://t.me/runget_rt">Our official Telegram channel</a>
 
 # Technical support:
+
 Email: runget.feedback@gmail.com
+
 Telegram: @kirilldual
+
 Telegram channel with news {WIP}
 
 WIP-Work In Progress (There may be bugs)
