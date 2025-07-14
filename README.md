@@ -42,8 +42,6 @@ Telegram channel with news {WIP}
 
 WIP-Work In Progress (There may be bugs)
 
-# «ООО»ТМЫВ-ДЕНЕГ Incorporated
-
 # Runget gallery
 
 ![Runget 1.0 Anythink Anywhere](https://github.com/user-attachments/assets/7296ed95-d2d0-4693-8b65-a0193eaeb880)
