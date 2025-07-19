@@ -60,7 +60,3 @@ WIP-Work In Progress (There may be bugs)
 
 
 ![Runget Wallpapers](https://github.com/user-attachments/assets/e22b9726-2ed9-4828-9b2e-2d35161a1590)
-
-
-
-     «ООО» ТМЫВ-ДЕНЕГ все права защищены
