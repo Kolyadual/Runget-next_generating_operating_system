@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runget - легкая, быстрая, простая и красивая операционная система.</title>
+    <style>
+        :root {
+            --primary: #4a6fa5;
+            --secondary: #166088;
+            --accent: #4fc3f7;
+            --dark: #0a1128;
+            --light: #f8f9fa;
+            --success: #4caf50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+        }
+        
+        .nav-links a:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(10, 17, 40, 0.8), rgba(10, 17, 40, 0.9)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 15px rgba(79, 195, 247, 0.4);
+            animation: pulse 2s infinite;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(79, 195, 247, 0.6);
+        }
+        
+        .btn-download {
+            background-color: var(--success);
+            box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+            margin-right: 1rem;
+        }
+        
+        .btn-download:hover {
+            box-shadow: 0 6px 20px rgba(76, 175, 80, 0.6);
+        }
+        
+        .features {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+            color: var(--secondary);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .feature-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .devices {
+            background-color: var(--dark);
+            color: white;
+            padding: 5rem 2rem;
+            text-align: center;
+        }
+        
+        .devices-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .devices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .device-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .device-card:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+        
+        .device-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .download {
+            padding: 5rem 2rem;
+            text-align: center;
+            background-color: #f1f5f9;
+        }
+        
+        .download-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .download-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .download-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 2rem;
+            width: 280px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .download-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .download-card h3 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+        }
+        
+        .footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .footer-logo img {
+            height: 30px;
+            margin-right: 10px;
+        }
+        
+        .footer-links h3 {
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            .navbar-container {
+                flex-direction: column;
+            }
+            
+            .nav-links {
+                margin-top: 1rem;
+            }
+            
+            .nav-links li {
+                margin-left: 1rem;
+                margin-right: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.2rem;
+            }
+            
+            .btn {
+                display: block;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+            
+            .btn-download {
+                margin-right: 0;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="#" class="logo">
+                <img src="https://private-user-images.githubusercontent.com/201611719/453971335-dffc803c-7fcd-4e9d-95ad-b87c157f74d4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTM5NDY5NDIsIm5iZiI6MTc1Mzk0NjY0MiwicGF0aCI6Ii8yMDE2MTE3MTkvNDUzOTcxMzM1LWRmZmM4MDNjLTdmY2QtNGU5ZC05NWFkLWI4N2MxNTdmNzRkNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDczMVQwNzI0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYTM4ZjBkZGRiMTZiN2NmMWZiYmI4ZTQ0MzE4MDg5ZDM5MmNlZDYxNThiY2MwZmRlYjAxOWIxYWY4MDU5MzVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.HvHjPr7UXP5i9CH9FJ_N5c4HOPyq1F79ljqcZ4b8CWQ" alt="Runget Logo">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#features">Возможности</a></li>
+                <li><a href="#devices">Устройства</a></li>
+                <li><a href="#download">Скачать</a></li>
+                <li><a href="#community">Сообщество</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Runget — удобная, красивая и быстрая операционная система!</h1>
+            <p>Мощная операционная система для повседневных задач и большими возможностями в запуске Windows, Linux и Android программ. Идеально подходит для дома, офиса, серверов и игр.</p>
+            <div>
+                <a href="#download" class="btn btn-download">Скачать сейчас</a>
+                <a href="#features" class="btn">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Возможности -->
+    <section class="features" id="features">
+        <h2 class="section-title">Почему Runget?</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fab fa-windows"></i>
+                </div>
+                <h3>Поддержка Windows-приложений</h3>
+                <p>Запускайте ВСЕ ваши любимые Windows-программы без переустановки системы! Игры, офисные приложения и многое другое работают из коробки.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fab fa-android"></i>
+                </div>
+                <h3>Android-приложения</h3>
+                <p>Устанавливайте и используйте приложения из Google Play Store или apk файла прямо на вашем компьютере с Runget!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-random"></i>
+                </div>
+                <h3>Поддержка других дистрибутивов</h3>
+                <p>Запускайте приложения, созданные для Ubuntu, Fedora, Arch Linux (Manjaro) и других дистрибутивов без дополнительных настрое!.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <h3>Игровая платформа</h3>
+                <p>Оптимизированная для игр система с поддержкой Steam и Epic Games!</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>Красивый интерфейс</h3>
+                <p>Современный и интуитивно понятный пользовательский интерфейс с анимациями и эффектами, которые радуют глаз.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3>Высокая производительность</h3>
+                <p>Оптимизированная система, которая работает быстро даже на слабом оборудовании и старых компьютерах.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Устройства -->
+    <section class="devices" id="devices">
+        <div class="devices-container">
+            <h2 class="section-title">Runget на любом устройстве</h2>
+            <p>Универсальная система, которая работает на всех ваших устройствах</p>
+            <div class="devices-grid">
+                <div class="device-card">
+                    <div class="device-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Компьютеры</h3>
+                    <p>Полноценная замена Windows на вашем домашнем или рабочем ПК</p>
+                </div>
+                <div class="device-card">
+                    <div class="device-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <h3>Ноутбуки</h3>
+                    <p>Оптимизированная работа с батареей и оборудованием ноутбуков</p>
+                </div>
+                <div class="device-card">
+                    <div class="device-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Серверы</h3>
+                    <p>Мощная и стабильная платформа для ваших серверных решений</p>
+                </div>
+                <div class="device-card">
+                    <div class="device-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Телефоны</h3>
+                    <p>Экспериментальная поддержка смартфонов и планшетов</p>
+                </div>
+                <div class="device-card">
+                    <div class="device-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Raspberry Pi</h3>
+                    <p>Идеальное решение для одноплатных компьютеров и IoT-устройств</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Скачать -->
+    <section class="download" id="download">
+        <div class="download-container">
+            <h2 class="section-title">Скачать Runget</h2>
+            <p>Выберите версию для вашего устройства</p>
+            <div class="download-options">
+                <div class="download-card">
+                    <h3>Стандартная версия</h3>
+                    <p>Полная версия с графическим интерфейсом для домашних компьютеров и ноутбуков</p>
+                    <a href="#" class="btn btn-download">Скачать (2.5 GB)</a>
+                </div>
+                <div class="download-card">
+                    <h3>Минимальная версия</h3>
+                    <p>Облегчённая версия для старых компьютеров и серверов</p>
+                    <a href="#" class="btn btn-download">Скачать (1.2 GB)</a>
+                </div>
+                <div class="download-card">
+                    <h3>Raspberry Pi</h3>
+                    <p>Специальная сборка для одноплатных компьютеров Raspberry Pi</p>
+                    <a href="#" class="btn btn-download">Скачать (1.8 GB)</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo">
+                    <img src="https://private-user-images.githubusercontent.com/201611719/453971335-dffc803c-7fcd-4e9d-95ad-b87c157f74d4.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NTM5NDY5NDIsIm5iZiI6MTc1Mzk0NjY0MiwicGF0aCI6Ii8yMDE2MTE3MTkvNDUzOTcxMzM1LWRmZmM4MDNjLTdmY2QtNGU5ZC05NWFkLWI4N2MxNTdmNzRkNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwNzMxJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDczMVQwNzI0MDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0wYTM4ZjBkZGRiMTZiN2NmMWZiYmI4ZTQ0MzE4MDg5ZDM5MmNlZDYxNThiY2MwZmRlYjAxOWIxYWY4MDU5MzVlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.HvHjPr7UXP5i9CH9FJ_N5c4HOPyq1F79ljqcZ4b8CWQ" alt="Runget Logo">
+                </div>
+                <p>Универсальная операционная система для всех ваших устройств. Мощь Runget с совместимостью Windows, Linux и Android.</p>
+                <div class="social-links">
+                    <a href="https://t.me/runget_rt"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-vk"></i></a>
+                    <a href="https://github.com/Kolyadual/Runget-next_generating_operating_system?ysclid=mdr2ci0kuh492924291"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h3>Ресурсы</h3>
+                <ul>
+                    <li><a href="#">Документация</a></li>
+                    <li><a href="#">Форум</a></li>
+                    <li><a href="#">Блог</a></li>
+                    <li><a href="#">Галерея</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Поддержка</h3>
+                <ul>
+                    <li><a href="#">Частые вопросы</a></li>
+                    <li><a href="#">Сообщество</a></li>
+                    <li><a href="#">Пожертвования</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Разработка</h3>
+                <ul>
+                    <li><a href="#">Исходный код</a></li>
+                    <li><a href="#">Баги и предложения</a></li>
+                    <li><a href="#">Для разработчиков</a></li>
+                    <li><a href="#">Дорожная карта</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Runget team. Все права защищены.</p>
+        </div>
+    </footer>
+</body>
+</html>
