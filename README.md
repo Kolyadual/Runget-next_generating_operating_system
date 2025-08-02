@@ -21,13 +21,13 @@ Thanks to the AI assistant Lily&Anemon bot, which was made by the Runget develop
 
 # Runget developers
 
-Kolyadual(Nikolay Alekhin) - The main creator, he was the one who came up with the idea of ​​creation. He made this system. Runget Software Creator.
+Kolyadual - The main creator, he was the one who came up with the idea of ​​creation. He made this system. Runget Software Creator.
 
-Kirilldual(Kirill Lavlinskiy) - Designer.
+Kirilldual - Designer.
 
-Seregaosm(Sergei Rubcov) - Designer №2, Runget Software Creator
+Seregaosm - Designer №2, Runget Software Creator
 
-Neeby(Gleb Savchenko) - Runget Software Creator.
+Neeby - Runget Software Creator.
 
 # Our social media
 <a href="https://t.me/runget_rt">Our official Telegram channel</a>
