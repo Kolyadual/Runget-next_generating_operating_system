@@ -19,6 +19,12 @@ Thanks to the AI assistant Lily&Anemon bot, which was made by the Runget develop
 
 [09.04.2025] Sorry, but we're delete the RungetOff Telegram chanel, but we have a new chanell here: https://t.me/runget_rt
 
+[01.09.2025] Runget 1.0 core is aviable now!
+
+# Download
+
+<a href="https://drive.google.com/file/d/1qkSEGjF2jDhtO2TqSy53rBtyOa2SmB4t/view?usp=drivesdk">Download Runget 1.0 core LTS/ATS</a>
+
 # Runget developers
 
 Kolyadual - The main creator, he was the one who came up with the idea of ​​creation. He made this system. Runget Software Creator.
