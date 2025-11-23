@@ -33,6 +33,8 @@ Thanks to the AI assistant Lily&Anemon bot, which was made by the Runget develop
 
 <a href="https://drive.google.com/file/d/1qkSEGjF2jDhtO2TqSy53rBtyOa2SmB4t/view?usp=drivesdk">Download Runget 1.0 core LTS/ATS</a>
 
+<a href="https://drive.google.com/file/d/1AojkzRfheu0-cI5q1ZW_8ISjkYRk9ocZ/view?usp=drivesdk">Download Runget 1.0</a>
+
 # Runget developers
 
 Kolyadual - The main creator, he was the one who came up with the idea of ​​creation. He made this system. Runget Software Creator.
