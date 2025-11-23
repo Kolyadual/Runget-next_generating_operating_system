@@ -21,6 +21,14 @@ Thanks to the AI assistant Lily&Anemon bot, which was made by the Runget develop
 
 [01.09.2025] Runget 1.0 core is aviable now!
 
+[03.11.2025] Runget 1.0 released and available for downloading!
+
+[05.11.2025] Runget 1.0 tested on Qemu with Core2duo emulation. Really cool results! No bugs!
+
+[06.11.2025] Running Microsoft Windows and Android apps double checked on Runget 1.0. Cool results! No bugs!
+
+[07.11.2025] Running Debian, Ubuntu, Arch, Gentoo and Fedora apps on Runget 1.0. Everything worked perfectly!
+
 # Download
 
 <a href="https://drive.google.com/file/d/1qkSEGjF2jDhtO2TqSy53rBtyOa2SmB4t/view?usp=drivesdk">Download Runget 1.0 core LTS/ATS</a>
